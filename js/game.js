@@ -5,7 +5,7 @@ define(['Util', 'UI', 'Api'], function (Util, UI, Api) {
     var mFPS = 60;              //動畫播放速率(幀/秒)
     var mCoinSize = 120;        //硬幣大小
      var mCoinRndNum = 50;       //硬幣隨機偏移值
-    var mTurnWaitTime = 500;   //開始多久後翻背面
+    var mTurnWaitTime = 1000;   //開始多久後翻背面
 
     var mDesTitle;
     var mCoinGroup;             //硬幣群組
