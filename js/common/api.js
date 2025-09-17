@@ -52,7 +52,7 @@ define(['Ajax', 'Util'], function (Ajax, Util) {
                             opts.success(data);
                             break;
                         default:
-                            errorFunc(opt, data);
+                            errorFunc(opts, data);
                             break;
                     }
                 },
