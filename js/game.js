@@ -34,12 +34,10 @@ define(['Util', 'UI', 'Api'], function (Util, UI, Api) {
             mCoinGroup = new Phaser.Group(game);
             //隨機數為正確硬幣位置
             mCorrectCoinIdx = game.rnd.integerInRange(0, (mCoinRow * mCoinColumn) - 1);
-             mCorrectCoinIdx2 = game.rnd.integerInRange(0, (mCoinRow * mCoinColumn) - 1);
-             console.log(mCorrectCoinIdx+' '+mCorrectCoinIdx2);
-            if( mCorrectCoinIdx==mCorrectCoinIdx2){
-                mCorrectCoinIdx2++;
-            }
-            console.log(mCorrectCoinIdx+' '+mCorrectCoinIdx2);
+            do {
+                mCorrectCoinIdx2 = game.rnd.integerInRange(0, (mCoinRow * mCoinColumn) - 1);
+            } while (mCorrectCoinIdx2 === mCorrectCoinIdx);
+            console.log(mCorrectCoinIdx + ' ' + mCorrectCoinIdx2);
             mDesTitle = game.add.image(0, 0, 'game_subtitle');
 
             initCoin();
